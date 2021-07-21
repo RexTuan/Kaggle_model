@@ -1,11 +1,4 @@
-# python kaggle\house_price_predict\210709_house_kaggle_auto.py
 # Kaggle房價預測
-# 有1460筆資料、81個變數(含Id、SalePrice、非計量變數)、其中有38個計量變數(含Id、SalePrice)
-# 模型(移除非計量變數、移除缺值) >>> 設定自動，拆分8:2 MAE:17668(最低)
-# train跟test缺失資料的欄位不一樣，該怎麼解決? >>> 全丟
-# impute+dummy的MAE每一次都不一樣，但找不出不一樣的原因在哪裡
-# 模型(移除非計量變數、插補-平均)
-# 模型(移除非計量變數、插補-中位數)
 
 # 匯入所需函示庫
 import pandas as pd
@@ -23,8 +16,8 @@ print("程式執行時間: {}".format(time_start))
 
 # -------------------------------------
 # 匯入資料
-test_path = r'C:\Users\Rex\Desktop\Rex\Python-training\kaggle\house_price_predict\test.csv'
-train_path = r'C:\Users\Rex\Desktop\Rex\Python-training\kaggle\house_price_predict\train.csv'
+test_path = r'\...\test.csv'        # path of test data
+train_path = r'\...\train.csv'      # path of traning data
 dt_test = pd.read_csv(test_path)
 dt_train = pd.read_csv(train_path)
 
@@ -292,16 +285,6 @@ def call_split(order):
 # Predict_Genernate()
 
 # # -------------------------------------
-# 看類別變數的欄位
-y
-dt_noY
-dt_test
-Split(dt_noY ,y ,0.9)
-s = (train_x.dtypes == 'object') #回傳所有欄位的布林值
-print(s[s].index)
-
-# object_cols = list(s[s].index)
-# print(object_cols)
 
 time_end = datetime.datetime.now()
 time_pass = time_end - time_start
